@@ -31,10 +31,13 @@ function Card({ movieData, isLiked = false }) {
 
   const addToList = async () => {
     try {
-      await axios.post("http://localhost:5000/api/v1/add", {
-        email,
-        data: movieData,
-      });
+      await axios.post(
+        "https://netflix-clone-backend-7lbd.onrender.com/api/v1/add",
+        {
+          email,
+          data: movieData,
+        }
+      );
       toast.success("Thêm vào danh sách thành công");
     } catch (error) {
       console.log(error);
