@@ -32,7 +32,7 @@ function Card({ movieData, isLiked = false }) {
   const addToList = async () => {
     try {
       await axios.post(
-        "https://netflix-clone-backend-7lbd.onrender.com/api/v1/add",
+        "https://netflix-clone-backend-production-2050.up.railway.app/api/v1/add",
         {
           email,
           data: movieData,
