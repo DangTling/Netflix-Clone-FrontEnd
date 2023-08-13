@@ -101,7 +101,7 @@ export const getUsersLikedMovies = createAsyncThunk(
     const {
       data: { movies },
     } = await axios.get(
-      `https://netflix-clone-backend-7lbd.onrender.com/api/v1/liked/${email}`
+      `https://netflix-clone-backend-production-2050.up.railway.app/api/v1/liked/${email}`
     );
     return movies;
   }
@@ -113,7 +113,7 @@ export const removeMovieFromLiked = createAsyncThunk(
     const {
       data: { movies },
     } = await axios.put(
-      "https://netflix-clone-backend-7lbd.onrender.com/api/v1/remove",
+      "https://netflix-clone-backend-production-2050.up.railway.app/api/v1/remove",
       {
         email,
         movieId,
